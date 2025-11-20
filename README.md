@@ -35,8 +35,43 @@ __PROCEDURE:__
 6.Verify the generated results
 
 __PROGRAM:__
-
+```asm
+clear;
+clc;
+clear;
+function z = f(x)
+    z = 3*(1 - x)^2
+endfunction
+a = 0;
+b = 1;
+EX = intg(a, b, f)
+function z = c(y)
+    z = 3*(1 - y)^2
+endfunction
+EY = intg(a, b, c)
+function z = g(x)
+    z = (x^2)*3*(1 - x)^2
+endfunction
+EX2 = intg(a, b, g)
+function z = h(y)
+    z = (y^2)*3*(1 - y)^2
+endfunction
+EY2 = intg(a, b, h)
+vX2 = EX2 - (EX)^2
+vY2 = EY2 - (EY)^2
+disp(EX, "Mean of X =")
+disp(EY, "Mean of Y =")
+disp(vX2, "Variance of X =")
+disp(vY2, "Variance of Y =")
+x = input("Type in the reference sequence = ")
+y = input("Type in the second sequence = ")
+n1 = max(size(y)) - 1
+r = corr(x, y, n1)
+plot2d3('gnn', r)
+```
 __OUTPUT GRAPH:__
+<img width="740" height="685" alt="image" src="https://github.com/user-attachments/assets/93682841-4b0d-4dcf-a235-df15c9314199" />
 
+![WhatsApp Image 2025-11-20 at 23 07 04_2d67280c](https://github.com/user-attachments/assets/fea6954c-d624-483e-b0e3-d289bc355f80)
 __RESULT:__
 
