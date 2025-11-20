@@ -71,7 +71,10 @@ plot2d3('gnn', r)
 ```
 __OUTPUT GRAPH:__
 <img width="740" height="685" alt="image" src="https://github.com/user-attachments/assets/93682841-4b0d-4dcf-a235-df15c9314199" />
+Type in the reference sequence = [1 2 3 4 5 6 7 8]
 
+Type in the second sequence = [2 4 6 8 10 11 12 13]
 ![WhatsApp Image 2025-11-20 at 23 07 04_2d67280c](https://github.com/user-attachments/assets/fea6954c-d624-483e-b0e3-d289bc355f80)
 __RESULT:__
+Thus the mean , variance and cross correlation are executed in Scilab and output is verified.
 
